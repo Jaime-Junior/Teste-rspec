@@ -17,8 +17,6 @@ describe "exercicio sub" do
     @a = tabela.detect { |isbn10| isbn10.text.include?("ISBN-13") }
     $isbn = @a.text.delete_prefix("ISBN-13 ")
     $isbn2 = @a.text.delete_prefix("ISBN-13 ").insert(3, "-")
-    puts $isbn #numero corrido
-    puts $isbn2 #numero com traço
   end
   it "checando na amazon" do
     visit "https://www.amazon.com/"
